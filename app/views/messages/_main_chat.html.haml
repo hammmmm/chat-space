@@ -1,0 +1,36 @@
+.main-chat
+  .main-chat__group-info 
+    .title-items
+      .title-items__name
+        test
+      .title-items__member
+        Member : masa
+    = link_to "#", class: "edit-btn" do
+      Edit
+  .main-chat__message-list
+    .messages
+      .message-items
+        .message-items__contents
+          .message-items__contents--name
+            masa
+          .message-items__contents--date
+            2020/04/10(Fri) 11:00:00
+        .message-items__text
+          おはよう
+      .message-items
+        .message-items__contents
+          .message-items__contents--name
+            masa
+          .message-items__contents--date
+            2020/04/10(Fri) 11:00:00
+        .message-items__text
+          おはよう
+  .main-chat__message-form
+    .form-items
+      .form-items__input
+        %input.form-items__input--text{placeholder: "type a message", type: "text"}
+        %label.form-items__input--image
+          = icon('far', 'image')
+          %input{type: "file", class: "file"}
+      = link_to "#", class: "send-btn" do
+        Send
