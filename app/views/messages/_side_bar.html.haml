@@ -6,16 +6,16 @@
       .top-items__icons
         = link_to new_group_path, class: "icon" do
           = icon('far', 'edit')
-        = link_to edit_user_path(current_user), class: "icon" do
+        = link_to edit_user_path(current_user.id), class: "icon" do
           = icon('fas', 'cog')
   .side-bar__group-list
     .groups
       - current_user.groups.each do |group|
         .group-items
-          = link_to "#" do
+          = link_to group_messages_path(group) do
             .group-items__name
               = group.name
             .group-items__message
-              まだメッセージはありません
+              = group.show_last_message
 
 

@@ -53,11 +53,11 @@ $btn-color: #38aef0;
       padding: 20px;
       .group-items {
         margin-bottom: 40px;
+        text-decoration: none;
         &__name {
-          color: white;
-          // text-decoration: none;
           font-size: 15px;
           margin-bottom: 5px;
+          color: white;
         }
         &__message {
           color: white;
@@ -104,6 +104,8 @@ $btn-color: #38aef0;
   &__message-list {
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
+    overflow: scroll;
+    box-sizing: border-box;
     .messages {
       padding-top: 35px;
       padding-left: 40px;
@@ -130,45 +132,45 @@ $btn-color: #38aef0;
       }
     }
   }
+
   &__message-form {
-    height: 90px;
     background-color: #d2d2d2;
     padding: 20px 40px;
-    .form-items {
-      height: 50px;
-      @include flexbox();
-      &__input {
+    height: 90px;
+    display: flex;
+    .form {
+      position: relative;
+      &__message {
+        height: 50px;
         width: 100%;
         background-color: #ffffff;
-        display: flex;
         align-items: center;
-        position: relative;
-        &--text {
-          height: 50px;
-          width: 100%;
-          border: none;
-          text-indent: 1em;
-        }
-        &--image {
-          position: absolute;
-          right: 10px;
-          font-size: 20px;
+        border: none;
+        text-indent: 1em;
+      }
+      &__mask {
+        &__image {
           cursor: pointer;
-          .file {
+          position: absolute;
+          .icon {
+            right: 10px;
+            top: 15px;
+          }
+          .hidden {
             display: none;
           }
         }
       }
-      .send-btn {
-        @include btn();
-        font-size: 16px;
-        height: 50px;
-        width: 100px;
-        background-color: $btn-color;
-        color: #ffffff;
-        line-height: 50px;
-        margin-left: 15px;
-      }
+    }
+    &__submit {
+      @include btn();
+      font-size: 16px;
+      height: 50px;
+      width: 100px;
+      background-color: $btn-color;
+      color: #ffffff;
+      line-height: 50px;
+      margin-left: 15px;
     }
   }
 }
