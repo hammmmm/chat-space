@@ -53,7 +53,9 @@ $btn-color: #38aef0;
       padding: 20px;
       .group-items {
         margin-bottom: 40px;
-        text-decoration: none;
+        .link {
+          text-decoration: none;
+        }
         &__name {
           font-size: 15px;
           margin-bottom: 5px;
@@ -134,43 +136,43 @@ $btn-color: #38aef0;
   }
 
   &__message-form {
-    background-color: #d2d2d2;
-    padding: 20px 40px;
-    height: 90px;
-    display: flex;
     .form {
+      background-color: #d2d2d2;
+      padding: 20px 40px;
+      height: 90px;
       position: relative;
       &__message {
         height: 50px;
-        width: 100%;
+        width: calc(100% - 150px);
         background-color: #ffffff;
         align-items: center;
         border: none;
         text-indent: 1em;
+        float: left;
       }
       &__mask {
         &__image {
           cursor: pointer;
           position: absolute;
-          .icon {
-            right: 10px;
-            top: 15px;
-          }
+          top: 30px;
+          right: 210px;
           .hidden {
             display: none;
           }
         }
       }
-    }
-    &__submit {
-      @include btn();
-      font-size: 16px;
-      height: 50px;
-      width: 100px;
-      background-color: $btn-color;
-      color: #ffffff;
-      line-height: 50px;
-      margin-left: 15px;
+      &__submit {
+        @include btn();
+        cursor: pointer;
+        font-size: 16px;
+        height: 50px;
+        width: 100px;
+        background-color: $btn-color;
+        color: #ffffff;
+        line-height: 50px;
+        margin-left: 15px;
+        float: right;
+      }
     }
   }
 }
