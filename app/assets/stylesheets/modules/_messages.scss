@@ -104,15 +104,15 @@ $btn-color: #38aef0;
     }
   }
   &__message-list {
-    height: calc(100vh - 100px - 90px);
-    background-color: #fafafa;
     overflow: scroll;
     box-sizing: border-box;
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
+    padding: 46px 40px 0;
     .messages {
-      padding-top: 35px;
-      padding-left: 40px;
+      margin-bottom: 20px;
       .message-items {
-        margin-bottom: 46px;
+        margin: 3px;
         &__contents {
           padding-bottom: 12px;
           display: flex;
@@ -132,9 +132,9 @@ $btn-color: #38aef0;
           color: #434a54;
         }
       }
-    }
+    } 
   }
-
+   
   &__message-form {
     .form {
       background-color: #d2d2d2;
