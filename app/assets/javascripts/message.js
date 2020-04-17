@@ -18,7 +18,6 @@ $(function(){
         <img class="message-items__image" src="${message.image}" alt="P sin">
       </div>
       </div>`
-      return html;
     } else {
       var html = 
      `<div class="messages">
@@ -36,8 +35,8 @@ $(function(){
         </div>
       </div>
       </div>`
-      return html;
     }
+    return html;
   }
     
   $('#new_message').on('submit', function(e){
